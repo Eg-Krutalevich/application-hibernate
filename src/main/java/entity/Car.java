@@ -16,25 +16,25 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "car_id")
-    private int carId;
+    @Column
+    private int car_id;
 
-    @Column(name = "name")
+    @Column
     private String name;
 
-    @Column(name = "year")
+    @Column
     private int year;
 
-    @Column(name = "distance")
+    @Column
     private int distance;
 
-    @Column(name = "fuel")
+    @Column
     private String fuel;
 
-    @Column(name = "fuel_consumption")
+    @Column
     private String fuelConsumption;
 
-    @Column(name = "price")
+    @Column
     private int price;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -54,11 +54,11 @@ public class Car {
     }
 
     public int getCarId() {
-        return carId;
+        return car_id;
     }
 
     public void setCarId(int carId) {
-        this.carId = carId;
+        this.car_id = car_id;
     }
 
     public String getName() {
@@ -120,7 +120,7 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "carId=" + carId +
+                "car_id=" + car_id +
                 ", name='" + name + '\'' +
                 ", year=" + year +
                 ", distance=" + distance +
